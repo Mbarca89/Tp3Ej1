@@ -36,11 +36,17 @@ public class Login extends javax.swing.JFrame {
         lblUsuario = new javax.swing.JLabel();
         lblContrasenia = new javax.swing.JLabel();
         lblIcono = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Ver = new javax.swing.JButton();
+        Ocultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Credenciales");
+
+        ptxtContrasenia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ptxtContraseniaActionPerformed(evt);
+            }
+        });
 
         btnLogin.setText("Registrar");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -94,14 +100,24 @@ public class Login extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons7-mostrar-contraseña-50.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Ver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons7-mostrar-contraseña-50.png"))); // NOI18N
+        Ver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VerMouseClicked(evt);
+            }
+        });
+        Ver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                VerActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons7-ocultar-contraseña-50.png"))); // NOI18N
+        Ocultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons7-ocultar-contraseña-50.png"))); // NOI18N
+        Ocultar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OcultarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,9 +129,9 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(38, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(135, 135, 135)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(117, 117, 117))
         );
         layout.setVerticalGroup(
@@ -125,8 +141,8 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(pnlLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(Ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
@@ -154,9 +170,23 @@ public class Login extends javax.swing.JFrame {
         );
     }//GEN-LAST:event_btnLoginActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void VerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_VerActionPerformed
+
+    private void ptxtContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ptxtContraseniaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ptxtContraseniaActionPerformed
+
+    private void VerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerMouseClicked
+      Ver.setVisible(true);
+      ptxtContrasenia.setEchoChar((char)0);
+    }//GEN-LAST:event_VerMouseClicked
+
+    private void OcultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OcultarMouseClicked
+        Ocultar.setVisible(true);
+      ptxtContrasenia.setEchoChar('*');
+    }//GEN-LAST:event_OcultarMouseClicked
 
 /**
  * @param args the command line arguments
@@ -214,9 +244,9 @@ public static void main(String args[]) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Ocultar;
+    private javax.swing.JButton Ver;
     private javax.swing.JButton btnLogin;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel lblContrasenia;
     private javax.swing.JLabel lblIcono;
     private javax.swing.JLabel lblUsuario;
