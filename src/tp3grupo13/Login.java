@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tp3grupo13;
 
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Mauricio
+ * @author Grupo 13
  */
 public class Login extends javax.swing.JFrame {
 
@@ -28,6 +23,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
         pnlLogin = new javax.swing.JPanel();
         txtUsuario = new javax.swing.JTextField();
         ptxtContrasenia = new javax.swing.JPasswordField();
@@ -40,6 +36,9 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Credenciales");
+        setSize(new java.awt.Dimension(580, 340));
+
+        pnlLogin.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
 
         ptxtContrasenia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,57 +46,26 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        btnLogin.setFont(new java.awt.Font("Hack Nerd Font", 0, 14)); // NOI18N
         btnLogin.setText("Registrar");
+        btnLogin.setAlignmentY(0.0F);
+        btnLogin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
 
+        lblUsuario.setFont(new java.awt.Font("Hack Nerd Font", 0, 18)); // NOI18N
         lblUsuario.setText("Usuario");
 
+        lblContrasenia.setFont(new java.awt.Font("Hack Nerd Font", 0, 18)); // NOI18N
         lblContrasenia.setText("Contraseña");
 
+        lblIcono.setBackground(new java.awt.Color(255, 255, 255));
+        lblIcono.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-agregar-administrador-80.png"))); // NOI18N
-
-        javax.swing.GroupLayout pnlLoginLayout = new javax.swing.GroupLayout(pnlLogin);
-        pnlLogin.setLayout(pnlLoginLayout);
-        pnlLoginLayout.setHorizontalGroup(
-            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLoginLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblContrasenia)
-                    .addComponent(lblUsuario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
-                    .addGroup(pnlLoginLayout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(lblIcono))
-                    .addGroup(pnlLoginLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ptxtContrasenia))
-                .addGap(99, 99, 99))
-        );
-        pnlLoginLayout.setVerticalGroup(
-            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlLoginLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblIcono)
-                .addGap(40, 40, 40)
-                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUsuario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblContrasenia)
-                    .addComponent(ptxtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
-        );
+        lblIcono.setAlignmentY(0.0F);
 
         Ver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons7-mostrar-contraseña-50.png"))); // NOI18N
         Ver.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -118,36 +86,87 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout pnlLoginLayout = new javax.swing.GroupLayout(pnlLogin);
+        pnlLogin.setLayout(pnlLoginLayout);
+        pnlLoginLayout.setHorizontalGroup(
+            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlLoginLayout.createSequentialGroup()
+                .addGap(0, 34, Short.MAX_VALUE)
+                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUsuario)
+                    .addComponent(ptxtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(pnlLoginLayout.createSequentialGroup()
+                            .addComponent(lblContrasenia)
+                            .addGap(104, 104, 104)
+                            .addComponent(Ver)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(pnlLoginLayout.createSequentialGroup()
+                .addGap(197, 197, 197)
+                .addComponent(lblIcono)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlLoginLayout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(btnLogin)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlLoginLayout.setVerticalGroup(
+            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlLoginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblIcono)
+                .addGap(9, 9, 9)
+                .addComponent(lblUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlLoginLayout.createSequentialGroup()
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlLoginLayout.createSequentialGroup()
+                                .addGap(57, 57, 57)
+                                .addComponent(lblContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLoginLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Ocultar))))
+                    .addComponent(Ver))
+                .addGap(18, 18, 18)
+                .addComponent(ptxtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnLogin)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(pnlLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addComponent(Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
+            .addComponent(pnlLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(pnlLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(72, Short.MAX_VALUE))
+            .addComponent(pnlLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void OcultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OcultarMouseClicked
+        Ocultar.setVisible(true);
+        ptxtContrasenia.setEchoChar('*');
+    }//GEN-LAST:event_OcultarMouseClicked
+
+    private void VerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VerActionPerformed
+
+    private void VerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerMouseClicked
+        Ver.setVisible(true);
+        ptxtContrasenia.setEchoChar((char)0);
+    }//GEN-LAST:event_VerMouseClicked
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         String message;
@@ -162,35 +181,21 @@ public class Login extends javax.swing.JFrame {
             titulo = "Error";
         }
         JOptionPane.showMessageDialog(
-                this,
-                message,
-                titulo,
-                JOptionPane.INFORMATION_MESSAGE
+            this,
+            message,
+            titulo,
+            JOptionPane.INFORMATION_MESSAGE
         );
     }//GEN-LAST:event_btnLoginActionPerformed
-
-    private void VerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_VerActionPerformed
 
     private void ptxtContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ptxtContraseniaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ptxtContraseniaActionPerformed
 
-    private void VerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerMouseClicked
-      Ver.setVisible(true);
-      ptxtContrasenia.setEchoChar((char)0);
-    }//GEN-LAST:event_VerMouseClicked
-
-    private void OcultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OcultarMouseClicked
-        Ocultar.setVisible(true);
-      ptxtContrasenia.setEchoChar('*');
-    }//GEN-LAST:event_OcultarMouseClicked
-
 /**
  * @param args the command line arguments
  */
-public static void main(String args[]) {
+public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -218,14 +223,14 @@ public static void main(String args[]) {
 
 .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-        
+
 
 } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Login.class
 
 .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-        
+
 
 } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class
@@ -246,6 +251,7 @@ public static void main(String args[]) {
     private javax.swing.JButton Ocultar;
     private javax.swing.JButton Ver;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblContrasenia;
     private javax.swing.JLabel lblIcono;
     private javax.swing.JLabel lblUsuario;
